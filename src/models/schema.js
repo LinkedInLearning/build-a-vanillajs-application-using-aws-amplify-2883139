@@ -73,6 +73,26 @@ export const schema = {
                     "type": "AWSDateTime",
                     "isRequired": false,
                     "attributes": []
+                },
+                "Author": {
+                    "name": "Author",
+                    "isArray": false,
+                    "type": {
+                        "model": "Author"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "BELONGS_TO",
+                        "targetName": "commentAuthorId"
+                    }
+                },
+                "postID": {
+                    "name": "postID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
                 }
             },
             "syncable": true,
@@ -81,6 +101,15 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byPost",
+                        "fields": [
+                            "postID"
+                        ]
+                    }
                 },
                 {
                     "type": "auth",
@@ -130,6 +159,33 @@ export const schema = {
                     "type": "AWSDateTime",
                     "isRequired": false,
                     "attributes": []
+                },
+                "Author": {
+                    "name": "Author",
+                    "isArray": false,
+                    "type": {
+                        "model": "Author"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "BELONGS_TO",
+                        "targetName": "postAuthorId"
+                    }
+                },
+                "Comments": {
+                    "name": "Comments",
+                    "isArray": true,
+                    "type": {
+                        "model": "Comment"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true,
+                    "association": {
+                        "connectionType": "HAS_MANY",
+                        "associatedWith": "postID"
+                    }
                 }
             },
             "syncable": true,
@@ -160,5 +216,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "049df55f9b0ee14379f587e4e079d9c2"
+    "version": "b8d88c304528109b331820d21b54ef1f"
 };

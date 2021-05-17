@@ -4,10 +4,12 @@ type Author @model @auth(rules: [{allow: public}]) {
   profilePic: String
 }
 
-type Comment @model @auth(rules: [{allow: public}]) {
+type Comment @model @auth(rules: [{allow: public}]) @key(name: "byPost", fields: ["postID"]) {
   id: ID!
   text: String!
   postedTime: AWSDateTime
+  Author: Author @connection
+  postID: ID
 }
 
 type Post @model @auth(rules: [{allow: public}]) {
@@ -15,4 +17,6 @@ type Post @model @auth(rules: [{allow: public}]) {
   link: String!
   description: String
   postedTime: AWSDateTime
+  Author: Author @connection
+  Comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
 }

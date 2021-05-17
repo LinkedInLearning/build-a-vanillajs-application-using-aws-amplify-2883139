@@ -1,0 +1,47 @@
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+#sign-out {
+  padding: 12px;
+}
+
+#sign-in {
+  padding-right: 8px;
+}
+
+a:visited { 
+  text-decoration: none; 
+  color: #3a3a3d; 
+ }
+
+input[type='submit'] {
+  margin-top: 10px;
+  border: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.post {
+  max-width: 400px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.post img {
+  max-width: 400px;
+}
