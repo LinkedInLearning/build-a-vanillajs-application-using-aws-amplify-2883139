@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build":  "build index.html"
+    "build": "build index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/LinkedInLearning/build-a-vanillajs-application-using-aws-amplify-2883139#readme",
   "devDependencies": {
-    "babel-core": "^6.26.3"
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
   }
 }
