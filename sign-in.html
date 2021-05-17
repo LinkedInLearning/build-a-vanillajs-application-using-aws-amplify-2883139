@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binaryville</title>
+  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script async defer src="./src/sign-in.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="background-color:blue-dcf0fb padding:32px">
+      <form id='sign-in'>
+        <h3 class="font-size:28px font-weight:500 line-height:1.142 color:blue-265f8e margin-bottom:16px">
+          Sign In
+        </h3>
+        <label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="email">
+          Email
+        </label>
+        <input
+          class="background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000"
+          id="email" name="email" required type="email">
+        <label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="password">
+          Password
+        </label>
+        <input
+          class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000"
+          id="password" name="password" required type="password" autocomplete="current-password">
+        <input type='submit' value='Sign In'
+          class="display:inline-block font-size:18px font-weight:700 line-height:1 padding-horizontal:24px padding-vertical:12px background-color:orange-ff583d color:neutral-222224 :hocus--background-color:yellow-f0c808 width:100%">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

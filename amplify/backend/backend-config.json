@@ -1,20 +1,32 @@
 {
   "api": {
-    "amplifyDatasource": {
+    "linkedinlearningrunthrough": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "description": "",
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDays": 30,
+              "description": "This is an api key"
             }
-          }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
         }
       }
+    }
+  },
+  "auth": {
+    "linkedinlearningrunthrough": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
     }
   }
 }
