@@ -1,0 +1,24 @@
+{
+  "name": "build-a-vanillajs-application-using-aws-amplify-2883139",
+  "version": "1.0.0",
+  "description": "This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build":  "build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinkedInLearning/build-a-vanillajs-application-using-aws-amplify-2883139.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LinkedInLearning/build-a-vanillajs-application-using-aws-amplify-2883139/issues"
+  },
+  "homepage": "https://github.com/LinkedInLearning/build-a-vanillajs-application-using-aws-amplify-2883139#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3"
+  }
+}
