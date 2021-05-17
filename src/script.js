@@ -22,6 +22,11 @@ const toggleNavBar = () => {
 }
 
 const getCurrentUser = async () => {
+  try {
+    currentUser = await Auth.currentAuthenticatedUser()
+  } catch (err) {
+    currentUser = null
+  } 
   toggleNavBar()
 }
 
