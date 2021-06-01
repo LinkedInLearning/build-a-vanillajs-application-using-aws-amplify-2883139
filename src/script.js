@@ -35,7 +35,22 @@ getCurrentUser()
 const pullData = async () => {
   try {
     const posts = await DataStore.query(Post)
-    console.log(posts)
+    const postsWithPics = []
+    for (const post of posts) {
+      try {
+        const postPic = await Storage.get(post.link)
+        postsWithPics.push({
+          description: post.description,
+          pic: postPic
+        })
+      } catch (err) {
+        postsWithPics.push({
+          description: post.description,
+          pic: post.link
+        })
+      }
+    }
+    console.log(postsWithPics)
   } catch (error) {
     console.error(error)
   }
