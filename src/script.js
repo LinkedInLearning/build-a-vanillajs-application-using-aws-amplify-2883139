@@ -1,4 +1,4 @@
-import Amplify, { DataStore } from 'aws-amplify'
+import Amplify, { Auth, DataStore } from 'aws-amplify'
 import { Post } from './models'
 
 import awsconfig from './aws-exports'
@@ -12,12 +12,12 @@ const toggleNavBar = () => {
     document.querySelector('#sign-in').classList.add('hidden')
     document.querySelector('#sign-up').classList.add('hidden')
     document.querySelector('#sign-out').classList.remove('hidden')
-    document.querySelector('#upload-img').classList.remove('hidden')
+    document.querySelector('#create-post').classList.remove('hidden')
   } else {
     document.querySelector('#sign-in').classList.remove('hidden')
     document.querySelector('#sign-up').classList.remove('hidden')
     document.querySelector('#sign-out').classList.add('hidden')
-    document.querySelector('#upload-img').classList.add('hidden')
+    document.querySelector('#create-post').classList.add('hidden')
   }
 }
 
@@ -26,12 +26,11 @@ const getCurrentUser = async () => {
     currentUser = await Auth.currentAuthenticatedUser()
   } catch (err) {
     currentUser = null
-  } 
+  }
   toggleNavBar()
 }
 
 getCurrentUser()
-
 
 const pullData = async () => {
   try {
@@ -44,18 +43,27 @@ const pullData = async () => {
 
 pullData()
 
-document.getElementById('create-post').addEventListener('click', async e => {
+document.getElementById('create-post').addEventListener('submit', async e => {
   e.preventDefault()
   try {
     const newPost = await DataStore.save(
       new Post({
-        link: 'https://binaryville.com/images/characters/dolores-disc.png',
-        description: "Felt cute might delete",
+        link: document.getElementById('link').value,
+        description: document.getElementById('description').value,
         postedTime: new Date().toISOString()
       })
     )
     console.log(newPost)
   } catch (error) {
     console.error(error)
-  } 
+  }
+})
+
+document.getElementById('sign-out').addEventListener('click', async () => {
+  try {
+    await Auth.signOut()
+    window.location.href = '/'
+  } catch (error) {
+    console.log('error signing out: ', error)
+  }
 })
