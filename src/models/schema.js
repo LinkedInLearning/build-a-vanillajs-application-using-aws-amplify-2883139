@@ -23,6 +23,22 @@ export const schema = {
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
                 }
             },
             "syncable": true,
@@ -94,6 +110,22 @@ export const schema = {
                     "type": "ID",
                     "isRequired": false,
                     "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
                 }
             },
             "syncable": true,
@@ -188,6 +220,22 @@ export const schema = {
                         "connectionType": "HAS_MANY",
                         "associatedWith": "postID"
                     }
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
                 }
             },
             "syncable": true,
@@ -226,5 +274,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "b8d88c304528109b331820d21b54ef1f"
+    "version": "fbf7113129790e7b2046c4c205dd0ac9"
 };

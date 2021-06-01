@@ -1,6 +1,6 @@
 {
     "identityPoolName": "testAuthIdentityPool",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "linked3c27e74b",
     "userPoolName": "linkedinlearningrunthrough",
     "autoVerifiedAttributes": [

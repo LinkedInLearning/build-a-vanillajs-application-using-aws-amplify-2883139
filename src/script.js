@@ -1,4 +1,4 @@
-import Amplify, { Auth, DataStore } from 'aws-amplify'
+import Amplify, { Auth, DataStore, Storage } from 'aws-amplify'
 import { Post } from './models'
 
 import awsconfig from './aws-exports'
@@ -46,9 +46,11 @@ pullData()
 document.getElementById('create-post').addEventListener('submit', async e => {
   e.preventDefault()
   try {
+    const file = document.getElementById('img').files[0]
+    const photo = await Storage.put(file.name, file)
     const newPost = await DataStore.save(
       new Post({
-        link: document.getElementById('link').value,
+        link: file.name,
         description: document.getElementById('description').value,
         postedTime: new Date().toISOString()
       })
