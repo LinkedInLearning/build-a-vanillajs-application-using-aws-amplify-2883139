@@ -15,6 +15,12 @@
     "categories": {
       "auth": {
         "linkedinlearningrunthrough": {}
+      },
+      "function": {
+        "linkedinlearningrunthroughPostConfirmation": {
+          "deploymentBucketName": "amplify-linkedinlearningrunt-staging-212735-deployment",
+          "s3Key": "amplify-builds/linkedinlearningrunthroughPostConfirmation-4b312f4178384e704d4d-build.zip"
+        }
       }
     }
   }

@@ -1,0 +1,25 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "linkedinlearningrunthrough",
+  "functionName": "linkedinlearningrunthroughPostConfirmation",
+  "resourceName": "linkedinlearningrunthroughPostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/snapshot/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "linkedinlearningrunthroughPostConfirmation",
+  "skipEdit": true,
+  "enableCors": false,
+  "permissions": {
+    "storage": {
+      "Author:@model(appsync)": [
+        "create",
+        "read"
+      ]
+    }
+  }
+}
