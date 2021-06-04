@@ -2,7 +2,7 @@
   display: none;
 }
 
-header {
+.header {
   padding: 8px;
   display: flex;
   justify-content: space-between;
@@ -32,16 +32,42 @@ input[type='submit'] {
 }
 
 .container {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 .post {
   max-width: 400px;
   border-radius: 4px;
-  margin: 0 auto;
+  margin: 4px auto;
+  border: 1px solid grey;
+  padding: 4px 0;
 }
 
 .post img {
-  max-width: 400px;
+  max-width: calc(100% - 8px);
+  display: block;
+  margin: 0 auto;
+}
+
+.post p {
+  padding: 4px;
+}
+
+.form {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.form input {
+  display: block;
+  margin: 0 auto;
+}
+
+.form label {
+  padding: 10px;
+}
+
+.form h2 {
+  font-weight: bold;
 }
