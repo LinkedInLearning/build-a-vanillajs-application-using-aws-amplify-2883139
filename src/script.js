@@ -38,17 +38,13 @@ const pullData = async () => {
     const postsWithPics = []
     for (const post of posts) {
       try {
-        console.log(post)
         const postPic = await Storage.get(post.link)
         postsWithPics.push({
           description: post.description,
           pic: postPic
         })
       } catch (err) {
-        postsWithPics.push({
-          description: post.description,
-          pic: post.link
-        })
+        console.log(err)
       }
     }
     const postsDiv = document.querySelector('.posts')
