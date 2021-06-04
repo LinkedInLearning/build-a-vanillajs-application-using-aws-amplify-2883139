@@ -27,7 +27,6 @@ exports.handler = async (event, context) => {
       updatedAt: { S: date.toISOString() },
       _version: { N: '1' },
       _lastChangedAt: { N: `${date.getTime()}` }
-
     },
     TableName: process.env.API_LINKEDINLEARNINGRUNTHROUGH_AUTHORTABLE_NAME
   }
