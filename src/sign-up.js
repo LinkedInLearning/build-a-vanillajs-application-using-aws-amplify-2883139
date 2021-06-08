@@ -1,8 +1,8 @@
-import { Auth, Amplify } from 'aws-amplify'
-import config from './aws-exports'
+// import { Auth, Amplify } from 'aws-amplify'
+// import config from './aws-exports'
 
-Amplify.configure(config)
+// Amplify.configure(config)
 
-document.querySelector('#sign-up').addEventListener('submit', async e => {
-  e.preventDefault()
-})
+// document.querySelector('#sign-up').addEventListener('submit', async e => {
+//   e.preventDefault()
+// })

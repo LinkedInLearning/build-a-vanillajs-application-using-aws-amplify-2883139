@@ -4,8 +4,8 @@
     "description": "This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].",
     "main": "index.js",
     "scripts": {
-        "start": "parcel index.html confirm.html",
-        "build": "build index.html confirm.html ",
+        "start": "parcel index.html confirm.html sign-in.html sign-up.html",
+        "build": "build index.html confirm.html sign-in.html sign-up.html",
         "amplify-modelgen": "node amplify/scripts/amplify-modelgen.js",
         "amplify-push": "node amplify/scripts/amplify-push.js"
     },
