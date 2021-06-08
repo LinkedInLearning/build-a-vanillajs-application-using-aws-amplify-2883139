@@ -1,0 +1,12 @@
+type Author @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  profilePic: String
+}
+
+type Post @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  description: String
+  image: String!
+  author: Author @connection
+}
