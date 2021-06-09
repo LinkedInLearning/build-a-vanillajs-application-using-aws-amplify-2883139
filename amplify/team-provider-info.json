@@ -10,6 +10,11 @@
       "StackName": "amplify-linkedinlearningampl-staging-191651",
       "StackId": "arn:aws:cloudformation:us-east-1:077942713113:stack/amplify-linkedinlearningampl-staging-191651/14bbb810-c88e-11eb-b01d-0e6b672d4ae7",
       "AmplifyAppId": "d1zbqrltb38y9k"
+    },
+    "categories": {
+      "auth": {
+        "linkedinlearningamplify": {}
+      }
     }
   }
 }
