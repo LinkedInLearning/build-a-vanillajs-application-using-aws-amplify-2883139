@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-linkedinlearningampl-staging-191651-authRole",
+      "UnauthRoleArn": "arn:aws:iam::077942713113:role/amplify-linkedinlearningampl-staging-191651-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::077942713113:role/amplify-linkedinlearningampl-staging-191651-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-linkedinlearningampl-staging-191651-deployment",
+      "UnauthRoleName": "amplify-linkedinlearningampl-staging-191651-unauthRole",
+      "StackName": "amplify-linkedinlearningampl-staging-191651",
+      "StackId": "arn:aws:cloudformation:us-east-1:077942713113:stack/amplify-linkedinlearningampl-staging-191651/14bbb810-c88e-11eb-b01d-0e6b672d4ae7",
+      "AmplifyAppId": "d1zbqrltb38y9k"
+    }
+  }
+}

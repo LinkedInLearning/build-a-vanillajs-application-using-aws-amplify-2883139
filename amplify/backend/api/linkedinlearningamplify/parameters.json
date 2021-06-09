@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "linkedinlearningamplify",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}

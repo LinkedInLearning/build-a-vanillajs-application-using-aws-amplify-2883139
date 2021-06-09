@@ -1,7 +1,33 @@
-import Amplify from 'aws-amplify'
+import Amplify, { DataStore } from 'aws-amplify'
+import { Post } from './models'
 import config from './aws-exports'
 
 Amplify.configure(config)
+
+document.getElementById('create-post').addEventListener('click', async e => {
+  e.preventDefault()
+
+  try {
+    const newPost = await DataStore.save(new Post({
+      description: 'Felt cute might delete',
+      link: 'https://binaryville.com/images/characters/dolores-disc.png'
+    }))
+    console.log(newPost)
+  } catch (err) {
+    console.log(err)
+  }
+})
+
+const pullData = async () => {
+  try {
+    const posts = await DataStore.query(Post)
+    console.log(posts)
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+pullData()
 
 // let currentUser = null
 
