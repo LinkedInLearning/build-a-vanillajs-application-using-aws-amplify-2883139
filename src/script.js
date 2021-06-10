@@ -1,5 +1,5 @@
 import Amplify, { Auth, DataStore } from 'aws-amplify'
-import { Post } from './models'
+import { Post, Author } from './models'
 import config from './aws-exports'
 
 Amplify.configure(config)
@@ -21,6 +21,7 @@ document.getElementById('create-post').addEventListener('click', async e => {
 const pullData = async () => {
   try {
     const posts = await DataStore.query(Post)
+    const authors = await DataStore.query(Author)
     console.log(posts)
   } catch (err) {
     console.log('error pulling data', err)

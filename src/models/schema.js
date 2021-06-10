@@ -62,7 +62,6 @@ export const schema = {
                             {
                                 "allow": "private",
                                 "operations": [
-                                    "read",
                                     "create",
                                     "update",
                                     "delete"
@@ -149,7 +148,6 @@ export const schema = {
                             {
                                 "allow": "private",
                                 "operations": [
-                                    "read",
                                     "create",
                                     "update",
                                     "delete"

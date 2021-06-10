@@ -1,10 +1,10 @@
-type Author @model @auth(rules: [{allow: public, operations: [read], provider: iam}, {allow: private, operations: [read, create, update, delete], provider: iam}]) {
+type Author @model @auth(rules: [{allow: public, operations: [read], provider: iam}, {allow: private, operations: [create, update, delete], provider: iam}]) {
   id: ID!
   name: String!
   profilePic: String
 }
 
-type Post @model @auth(rules: [{allow: public, operations: [read], provider: iam}, {allow: private, operations: [read, create, update, delete], provider: iam}]) {
+type Post @model @auth(rules: [{allow: public, operations: [read], provider: iam}, {allow: private, operations: [create, update, delete], provider: iam}]) {
   id: ID!
   description: String
   image: String!
