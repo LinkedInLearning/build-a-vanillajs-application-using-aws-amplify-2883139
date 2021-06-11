@@ -22,7 +22,7 @@
     }
   },
   "storage": {
-    "binaryvillepics": {
+    "s3f3b2bef8": {
       "service": "S3",
       "providerPlugin": "awscloudformation"
     }

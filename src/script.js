@@ -1,17 +1,22 @@
-import Amplify, { Auth, DataStore } from 'aws-amplify'
+import Amplify, { Auth, DataStore, Storage } from 'aws-amplify'
 import { Post, Author } from './models'
 import config from './aws-exports'
 
 Amplify.configure(config)
 
-document.getElementById('create-post').addEventListener('click', async e => {
+document.getElementById('create-post').addEventListener('submit', async e => {
   e.preventDefault()
 
   try {
+    const file = document.getElementById('img').files[0]
+
+    await Storage.put(file.name, file)
+
     const newPost = await DataStore.save(new Post({
-      description: 'Felt cute might delete',
-      image: 'https://binaryville.com/images/characters/dolores-disc.png'
+      description: document.getElementById('description').value,
+      image: file.name
     }))
+
     console.log(newPost)
   } catch (err) {
     console.log(err)
