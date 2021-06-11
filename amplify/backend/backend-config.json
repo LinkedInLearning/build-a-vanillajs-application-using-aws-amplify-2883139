@@ -20,5 +20,11 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "storage": {
+    "binaryvillepics": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
