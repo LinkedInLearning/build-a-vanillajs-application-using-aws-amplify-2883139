@@ -13,5 +13,13 @@
   "triggerEventPath": "PostConfirmation.event.json",
   "roleName": "linkedinlearningamplifyPostConfirmation",
   "skipEdit": true,
-  "enableCors": false
+  "enableCors": false,
+  "permissions": {
+    "storage": {
+      "Author:@model(appsync)": [
+        "create",
+        "read"
+      ]
+    }
+  }
 }

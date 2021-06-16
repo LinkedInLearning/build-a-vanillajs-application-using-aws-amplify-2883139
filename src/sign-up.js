@@ -5,13 +5,19 @@ Amplify.configure(config)
 
 document.querySelector('#sign-up').addEventListener('submit', async e => {
   e.preventDefault()
+
   try {
+    const username = document.querySelector('#email').value
     const { user } = await Auth.signUp({
-      username: document.querySelector('#email').value,
-      password: document.querySelector('#password').value
+      username,
+      password: document.querySelector('#password').value,
+      attributes: {
+        phone_number: document.querySelector('#phone-number').value
+      }
     })
-    console.log(user)
+
+    window.location.href = '/confirm.html?username=' + username
   } catch (err) {
-    console.error(err)
+    console.log(err)
   }
 })
