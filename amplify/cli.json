@@ -22,7 +22,8 @@
             "usetypesgeneratorplugin": true,
             "cleangeneratedmodelsdirectory": true,
             "retaincasestyle": true,
-            "addtimestampfields": true
+            "addtimestampfields": true,
+            "handlelistnullabilitytransparently": true
         },
         "appsync": {
             "generategraphqlpermissions": true

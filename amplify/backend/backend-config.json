@@ -1,6 +1,6 @@
 {
   "api": {
-    "linkedinlearningrunthrough": {
+    "linkedinlearningamplify": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -14,17 +14,34 @@
     }
   },
   "auth": {
-    "linkedinlearningrunthrough": {
+    "linkedinlearningamplify": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "linkedinlearningamplifyPostConfirmation",
+          "triggerProvider": "Cognito",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
       "customAuth": false
     }
   },
   "storage": {
-    "s34bf775bd": {
+    "s3f3b2bef8": {
       "service": "S3",
       "providerPlugin": "awscloudformation"
+    }
+  },
+  "function": {
+    "linkedinlearningamplifyPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }

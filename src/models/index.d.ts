@@ -14,25 +14,11 @@ export declare class Author {
   static copyOf(source: Author, mutator: (draft: MutableModel<Author>) => MutableModel<Author> | void): Author;
 }
 
-export declare class Comment {
-  readonly id: string;
-  readonly text: string;
-  readonly postedTime?: string;
-  readonly Author?: Author;
-  readonly postID?: string;
-  readonly createdAt?: string;
-  readonly updatedAt?: string;
-  constructor(init: ModelInit<Comment>);
-  static copyOf(source: Comment, mutator: (draft: MutableModel<Comment>) => MutableModel<Comment> | void): Comment;
-}
-
 export declare class Post {
   readonly id: string;
-  readonly link: string;
   readonly description?: string;
-  readonly postedTime?: string;
-  readonly Author?: Author;
-  readonly Comments?: (Comment | null)[];
+  readonly image: string;
+  readonly author?: Author;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<Post>);

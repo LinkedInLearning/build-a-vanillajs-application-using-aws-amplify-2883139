@@ -2,7 +2,7 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "linkedinlearningrunt",
+  "projectName": "linkedinlearningampl",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
